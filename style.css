@@ -2,56 +2,77 @@
     padding: 0px;
     margin: 0px;
 }
-#dropdown{
-    margin: 10px;
-    border: 1px solid grey;
-    width: fit-content;
-    padding-inline: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
-#dropdown:hover{
-    background-color: #D3D3D3;
-}
-.menu{
-    width: 600px;
-    height: 45px;
-    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2);
+#top > .options{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    gap: 10px;
     border-radius: 10px;
-    margin-top: 10px;
+    padding: 4px 20px;
+    box-shadow: 2px 2px #e1e1e1;
+    z-index: 100px;
+    border: none;
 }
-#navbar{
+.btn:hover , .active{
+    background-color: #aaaab5 !important;
+    border-radius: 4PX;
+}
+#top{
+    position: absolute;
+    width: 100vw;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 10px;
 }
-.profile{
-    width: fit-content;
+.btn{
+    background-color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18PX;
+    z-index: 100px;
+}
+#bottom{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+#bottom>.options>button{
+    background-color: white;
+    border: none;
+    font-size: 18PX;
+}
+#bottom>.options>button:hover {
+    background-color: #ececf3;
+    border-radius: 4PX;
+    padding: 4px 4px;
+    border: 2px solid red;
+}
+#bottom>.options{
     margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-.library{
-    width: fit-content;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid black;
-    display: flex;
-}
-.library > i{
-    margin-right: 10px;
-}
-.options{
-    width: fit-content;
-    margin: 15px;
 
 }
-.menu{
+
+.form {
+    position: fixed;
+    left: 10px;
+    top: 30vh ;
+    border: 1px solid #ededed;
+    padding: 20px; 
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
-.menu > i:hover{
-    background-color: #D3D3D3;
-    cursor: pointer;
+.hide{
+    display: none;
 }
